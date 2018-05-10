@@ -17,7 +17,7 @@ namespace PiDataReciever
             UdpClient udpServer = new UdpClient(7777);
 
             //Creates an IPEndPoint to record the IP Address and port number of the sender.  
-            IPAddress ip = IPAddress.Parse("192.168.6.194");
+            IPAddress ip = IPAddress.Parse("192.168.3.209");
             IPEndPoint RemoteIpEndPoint = new IPEndPoint(ip, 7777);
 
             try
