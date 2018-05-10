@@ -12,6 +12,7 @@ namespace PiDataReciever
     {
         static void Main(string[] args)
         {
+            var service = new ServiceReference1.Service1Client("BasicHttpBinding_IService1");
 
             //Creates a UdpClient for reading incoming data.
             UdpClient udpServer = new UdpClient(7777);
@@ -40,7 +41,10 @@ namespace PiDataReciever
                     Console.WriteLine("Temp: " + temp);
                     Console.WriteLine("Humi: " + humi);
 
-                  
+                    service.InsertFeedbackDB(temp, humi);
+                    Console.WriteLine("Insert complete");
+                    //kalde af soap webservice til databasen, push data til db. 
+
                 }
             }
             catch (Exception e)
