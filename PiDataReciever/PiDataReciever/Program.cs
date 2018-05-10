@@ -30,16 +30,24 @@ namespace PiDataReciever
                     Byte[] receiveBytes = udpServer.Receive(ref RemoteIpEndPoint); // modtager bytes
                     string receivedData = Encoding.ASCII.GetString(receiveBytes);  // laver bytes til string 
                     Console.WriteLine("Data is transferred");
-
+                    Console.WriteLine("recivedata format: " + receivedData);
+                    
+                
                     string[] array = receivedData.Split(' ');
-                    string test = array[0];
-                    Console.WriteLine(test);
+                    string temp = array[1];
+                    string humi = array[4];
+
+                    Console.WriteLine("Temp: " + temp);
+                    Console.WriteLine("Humi: " + humi);
+
+                  
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
             }
+            Console.ReadLine();
         }
     }
 }
