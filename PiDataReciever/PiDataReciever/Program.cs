@@ -34,14 +34,14 @@ namespace PiDataReciever
                     Console.WriteLine("recivedata format: " + receivedData);
                     
                 
-                    string[] array = receivedData.Split(' ');
-                    string temp = array[1];
-                    string humi = array[4];
+                    string[] array = receivedData.Split(' ');  // Splitter en string i array
+                    string temp = array[1]; // viser index nummer 1, som er temperatur
+                    string humi = array[4]; // viser index nummer 4, som er luftfugtighed
 
-                    Console.WriteLine("Temp: " + temp);
+                    Console.WriteLine("Temp: " + temp); 
                     Console.WriteLine("Humi: " + humi);
 
-                    service.InsertFeedbackDB(temp, humi);
+                    service.InsertFeedbackDB(temp, humi); // indsætter vores array data i vores database via vores SOAP.
                     Console.WriteLine("Insert complete");
                     //kalde af soap webservice til databasen, push data til db. 
 
