@@ -41,7 +41,7 @@ namespace PiDataReciever
                     Console.WriteLine("Temp: " + temp); 
                     Console.WriteLine("Humi: " + humi);
 
-                    service.InsertFeedbackDB(temp, humi); // indsætter vores array data i vores database via vores SOAP.
+                    service.InsertDataToDatabase(temp, humi); // indsætter vores array data i vores database via vores SOAP.
                     Console.WriteLine("Insert complete");
                     //kalde af soap webservice til databasen, push data til db. 
 
