@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="InsertFeedbackDB">
+  <xs:element name="InsertDataToDatabase">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="temperatur" nillable="true" type="xs:string" />
@@ -8,10 +8,10 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertFeedbackDBResponse">
+  <xs:element name="InsertDataToDatabaseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertFeedbackDBResult" type="xs:int" />
+        <xs:element minOccurs="0" name="InsertDataToDatabaseResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

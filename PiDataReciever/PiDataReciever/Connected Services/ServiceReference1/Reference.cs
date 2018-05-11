@@ -15,11 +15,11 @@ namespace PiDataReciever.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertFeedbackDB", ReplyAction="http://tempuri.org/IService1/InsertFeedbackDBResponse")]
-        int InsertFeedbackDB(string temperatur, string luftfugtighed);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertDataToDatabase", ReplyAction="http://tempuri.org/IService1/InsertDataToDatabaseResponse")]
+        int InsertDataToDatabase(string temperatur, string luftfugtighed);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertFeedbackDB", ReplyAction="http://tempuri.org/IService1/InsertFeedbackDBResponse")]
-        System.Threading.Tasks.Task<int> InsertFeedbackDBAsync(string temperatur, string luftfugtighed);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertDataToDatabase", ReplyAction="http://tempuri.org/IService1/InsertDataToDatabaseResponse")]
+        System.Threading.Tasks.Task<int> InsertDataToDatabaseAsync(string temperatur, string luftfugtighed);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace PiDataReciever.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public int InsertFeedbackDB(string temperatur, string luftfugtighed) {
-            return base.Channel.InsertFeedbackDB(temperatur, luftfugtighed);
+        public int InsertDataToDatabase(string temperatur, string luftfugtighed) {
+            return base.Channel.InsertDataToDatabase(temperatur, luftfugtighed);
         }
         
-        public System.Threading.Tasks.Task<int> InsertFeedbackDBAsync(string temperatur, string luftfugtighed) {
-            return base.Channel.InsertFeedbackDBAsync(temperatur, luftfugtighed);
+        public System.Threading.Tasks.Task<int> InsertDataToDatabaseAsync(string temperatur, string luftfugtighed) {
+            return base.Channel.InsertDataToDatabaseAsync(temperatur, luftfugtighed);
         }
     }
 }

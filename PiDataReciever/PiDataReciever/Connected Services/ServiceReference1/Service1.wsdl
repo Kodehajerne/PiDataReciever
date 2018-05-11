@@ -6,22 +6,22 @@
       <xsd:import schemaLocation="http://localhost:50280/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_InsertFeedbackDB_InputMessage">
-    <wsdl:part name="parameters" element="tns:InsertFeedbackDB" />
+  <wsdl:message name="IService1_InsertDataToDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDataToDatabase" />
   </wsdl:message>
-  <wsdl:message name="IService1_InsertFeedbackDB_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertFeedbackDBResponse" />
+  <wsdl:message name="IService1_InsertDataToDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDataToDatabaseResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="InsertFeedbackDB">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertFeedbackDB" message="tns:IService1_InsertFeedbackDB_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertFeedbackDBResponse" message="tns:IService1_InsertFeedbackDB_OutputMessage" />
+    <wsdl:operation name="InsertDataToDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertDataToDatabase" message="tns:IService1_InsertDataToDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertDataToDatabaseResponse" message="tns:IService1_InsertDataToDatabase_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="InsertFeedbackDB">
-      <soap:operation soapAction="http://tempuri.org/IService1/InsertFeedbackDB" style="document" />
+    <wsdl:operation name="InsertDataToDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertDataToDatabase" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
