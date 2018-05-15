@@ -4,7 +4,7 @@ import time
 import RPi.GPIO as GPIO
 # Socket bliver importeret for at konvertere vores beskeder fra TCP til UDP.
 import socket
-UDP_IP="192.168.3.197"
+UDP_IP="192.168.6.151"
 UDP_PORT = 7777
 message = "Default"
 
