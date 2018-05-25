@@ -36,7 +36,7 @@ namespace PiDataReciever
                 
                     string[] array = receivedData.Split(' ');  // Splitter en string i array
                     string temp = array[1]; // viser index nummer 1, som er temperatur
-                    string humi = array[4]; // viser index nummer 4, som er luftfugtighed
+                    string humi = array[5]; // viser index nummer 4, som er luftfugtighed
 
                     Console.WriteLine("Temp: " + temp); 
                     Console.WriteLine("Humi: " + humi);

@@ -23,7 +23,7 @@ while True:
 	humidity, temperature = Adafruit_DHT.read_retry(sensor, 24)
 	if humidity is not None and temperature is not None:
 	#temperatur og fugt udskrift når scriptet bliver kørt
-		stringformat = 'Temp {0:0.1f}*C  Humidity {1:0.1f}%'.format(temperature, humidity) 
+		stringformat = 'Temp {0:0.1f} *C  Humidity {1:0.1f} %'.format(temperature, humidity) 
 		print(stringformat)
 		message = (stringformat)
 		#Sender stringformat til modtager IP og PORT
